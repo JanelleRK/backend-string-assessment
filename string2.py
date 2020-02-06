@@ -18,9 +18,12 @@
 
 
 def verbing(s):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+    if len(s) >= 3 and s.endswith('ing'):
+        return s + 'ly'
+    elif len(s) >= 3:
+        return s + 'ing'
+    else:
+        return s
 
 # E. not_bad
 # Given a string, find the first appearance of the
