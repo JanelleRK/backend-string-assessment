@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -66,8 +66,12 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-    """Your code goes here.  Edit this docstring."""
-    return
+    if len(a) >= 3 and len(b) >= 3 :
+        a_new_word = b[0:2] + a[2:]
+        b_new_word = a[0:2] + b[2:]
+        return a_new_word + ' ' + b_new_word
+
+    
 
 
 # Provided simple test() function used in main() to print
