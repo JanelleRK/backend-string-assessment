@@ -34,8 +34,12 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    if 'not so bad' in s:
+        return s.replace('not so bad', 'good')
+    elif 'not that bad' in s:
+        return s.replace('not that bad', 'good')
+    else:
+        return s
 
 
 # F. front_back
@@ -46,7 +50,6 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    """Your code goes here.  Edit this docstring."""
     return
 
 
