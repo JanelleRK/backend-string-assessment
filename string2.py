@@ -50,11 +50,15 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    return
+    a_middle = len(a) // 2 + len(a) % 2
+    b_middle = len(b) // 2 + len(b) % 2
+    return a[0:a_middle] + b[0:b_middle] + a[a_middle:] + b[b_middle:]
 
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+#finished with help from demo 2/12/2020
 def test(got, expected):
     """Your code goes here.  Edit this docstring."""
     if got == expected:
