@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -18,9 +18,12 @@
 
 
 def verbing(s):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+    if len(s) >= 3 and s.endswith('ing'):
+        return s + 'ly'
+    elif len(s) >= 3:
+        return s + 'ing'
+    else:
+        return s
 
 # E. not_bad
 # Given a string, find the first appearance of the
@@ -31,8 +34,12 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    if 'not so bad' in s:
+        return s.replace('not so bad', 'good')
+    elif 'not that bad' in s:
+        return s.replace('not that bad', 'good')
+    else:
+        return s
 
 
 # F. front_back
@@ -43,12 +50,15 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    """Your code goes here.  Edit this docstring."""
-    return
+    a_middle = len(a) // 2 + len(a) % 2
+    b_middle = len(b) // 2 + len(b) % 2
+    return a[0:a_middle] + b[0:b_middle] + a[a_middle:] + b[b_middle:]
 
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+#finished with help from demo 2/12/2020
 def test(got, expected):
     """Your code goes here.  Edit this docstring."""
     if got == expected:
