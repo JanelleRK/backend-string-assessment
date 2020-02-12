@@ -54,8 +54,16 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    first_letter = s[0]
+    rest_of_string = s[1:]
+    new_string = ''
+    new_word = ''
+    if first_letter in rest_of_string:
+        new_string = rest_of_string.replace(first_letter, '*')
+        new_word = first_letter + new_string
+        return(new_word)
+    else:
+        return s
 
 
 # D. MixUp
